@@ -28,25 +28,25 @@ import defaultButton from '@/components/defaultButton.vue';
     return {
     listCard: [
       {
-        image: "/img/square2-1.6b488368.svg",
+        image: "square2-1.svg",
         price: '30 000',
         brend: 'Каменный остров',
         name: 'Жилет с нашивкой компасом',
       },
       {
-        image: "/img/square2-2.e8fc30d6.svg",
+        image: "square2-2.svg",
         price: '18 800',
         brend: 'АМИ Париж',
         name: 'Полосатая рубашка с коротким рукавом',
       },
       {
-        image: "/img/square2-3.c00388bd.svg",
+        image: "square2-3.svg",
         price: '47 300',
         brend: 'Вквадрате2',
         name: 'Укороченные брюки с вышитым логотипом',
       },
       {
-        image: "/img/square2-4.49e3f717.svg",
+        image: "square2-4.svg",
         price: '19 000',
         brend: 'Акне Студия',
         name: 'Полосатый двубортный блейзер',

@@ -1,7 +1,8 @@
 <template>
   <div class = "card">
     <div class = "upper"> 
-      <img :src=" image "/>
+      <img :src="require(`@/assets/${image}`)" :alt="brend">
+
     
     <h2>{{ price }} руб </h2>
   </div>
