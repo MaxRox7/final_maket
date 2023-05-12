@@ -1,32 +1,57 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
+<div id = "app">
+  
+<Baseheader></Baseheader>
+<router-view/>
+<Basefooter> </Basefooter>
+
+</div> 
+
+ 
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+<script>
+import Baseheader from './components/Baseheader.vue'
+import Basefooter from './components/Basefooter.vue'
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+
+export default {
+  components : {
+
+    Baseheader,
+
+    Basefooter
+
   }
+
+
+
+
 }
+
+</script>
+
+
+
+<style lang="scss">
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ #app {
+  flex-direction: column;
+  width: 100%;
+
+ }
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+
+div, header, footer, ul, li,main  {
+  display: flex;
+}
+
 </style>
