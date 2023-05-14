@@ -44,6 +44,7 @@
   display: flex;
   padding: 24px;
   flex-direction: column;
+  color: #0D1421;
   p {
 font-family: 'Inter';
 font-style: normal;

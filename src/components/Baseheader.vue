@@ -7,7 +7,8 @@
     </div>
     <div class = "right"> 
     <img src = "@/assets/lk.svg"/>
-    <router-link class = "link-shop" to = "/shoppingcartfull"><img src = "@/assets/shop.svg" alt = "shop"/></router-link>
+    <!-- убрать ..full для отображения пустой корзины -->
+    <router-link class = "link-shop" to = "/shoppingcartfull"><img src = "@/assets/shop.svg" alt = "shop"/></router-link>  
   </div>
 
 
@@ -21,6 +22,17 @@
 </script>
 
 <style lang="scss" scoped>
+
+.link {
+  h1 {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+color: #354153;
+  }
+}
 
 header {
   justify-content: space-between;

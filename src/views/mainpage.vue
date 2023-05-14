@@ -19,11 +19,11 @@ import selectButton from '@/components/selectButton.vue'
 import defaultButton from '@/components/defaultButton.vue';
 import stone_island from './stone_island.vue';
 import shoppingCart from './shoppingCart.vue';
-//import shoppingCartfullVue from './shoppingCartfull.vue'; Для полной корзины добавить full
+import shoppingCartfullVue from './shoppingCartfull.vue';
   export default {
     name: "mainpage",
     components: {
-    card, selectButton, defaultButton, stone_island, shoppingCart //shoppingCartfullVue
+    card, selectButton, defaultButton, stone_island, shoppingCart,shoppingCartfullVue
     },
     data() {
     return {
