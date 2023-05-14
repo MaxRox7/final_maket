@@ -9,6 +9,7 @@
   <div class="down">
    <h3> Бренд <p> {{ brend }} </p> </h3>
     <p> {{ name }} </p>
+    <p> {{ cardfull }}</p>
   </div> 
   </div>
 </template>
@@ -29,8 +30,10 @@
       },
       name: {
         type: String,
-      }
-
+      },
+      cardfull: {
+        type: String,
+      },
 
     }
   }
@@ -40,7 +43,7 @@
 .card {
   display: flex;
   padding: 24px;
-  flex-direction: row;
+  flex-direction: column;
   p {
 font-family: 'Inter';
 font-style: normal;

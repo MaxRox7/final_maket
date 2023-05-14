@@ -41,7 +41,7 @@ import stone_island from './stone_island.vue';
 .cart {
   display: flex;
   flex-direction: column;
-  
+  margin-bottom: 528px;
 }
 .shopping {
   display: flex;
