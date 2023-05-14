@@ -1,18 +1,10 @@
 <template>
   <div class="btn" @click="showList">
-      <img src="@/assets/Icon.svg" />
-      <p>Фильтры</p>
+      <img src="@/assets/galka.svg" />
+      <p>Выберите размер</p>
 
       <ul v-if="statusShow">
-    
-        <input type="checkbox" id="acne" value="Акне" v-model="checkedNames">
-        <label for="jack">Акне Студия</label>
-        <input type="checkbox" id="paris" value="Париж" v-model="checkedNames">
-        <label for="john">Ами Париж</label>
-        <input type="checkbox" id="square" value="Квадрат" v-model="checkedNames">
-        <label for="mike">Вквадрате2</label>
-        <input type="checkbox" id="island" value="Остров" v-model="checkedNames">
-        <label for="mike">Каменный остров</label>
+          <li v-for="(item, index) in list" :key="index" @click="select($event, item)">{{ item }}</li>
       </ul>
   </div>
 </template>
@@ -21,7 +13,9 @@
 export default {
   data() {
       return {
-        
+          list: [
+          'XS', 'S', 'M','L', 'XL'
+          ],
           statusShow: false
       }
   },
@@ -60,7 +54,7 @@ ul {
     border-radius: 8px;
     gap:8px;
 }
-p{
+p {
   font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
@@ -68,13 +62,6 @@ font-size: 16px;
 line-height: 24px;
 }
 li {
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-}
-label {
   font-family: 'Inter';
 font-style: normal;
 font-weight: 400;

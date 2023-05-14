@@ -40,7 +40,7 @@
 .card {
   display: flex;
   padding: 24px;
-  flex-direction: column;
+  flex-direction: row;
   p {
 font-family: 'Inter';
 font-style: normal;
@@ -62,6 +62,8 @@ line-height: 28px;
 }
 
 .upper {
+  display: flex;
+  flex-direction: row;
   img {
     margin-bottom: 16px;
   }
@@ -69,6 +71,7 @@ line-height: 28px;
   margin-bottom: 16px ;
 }
 .down {
+  
   color: #667085;
   flex-direction: column;
   h3 {

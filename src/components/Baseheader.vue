@@ -2,12 +2,12 @@
   <header> 
     <div class = "container"> 
       <img src = "@/assets/logo.svg"/>
-      <h1> Курсовой макет</h1>
+      <router-link class = "link" to="/"><h1> Курсовой макет </h1></router-link>
 
     </div>
     <div class = "right"> 
     <img src = "@/assets/lk.svg"/>
-    <img src = "@/assets/shop.svg" alt = "shop"/>
+    <router-link class = "link-shop" to = "/shoppingcartfull"><img src = "@/assets/shop.svg" alt = "shop"/></router-link>
   </div>
 
 
@@ -40,8 +40,14 @@ line-height: 32px;
   img {
     padding-right: 16px ;
   }
+
  }
- 
+ .link {
+    text-decoration: none;
+    :visited {
+      color: black;
+    }
+  }
 .right {
 
   img {

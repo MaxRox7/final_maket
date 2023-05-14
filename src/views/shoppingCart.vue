@@ -1,29 +1,33 @@
 <template>
-  <div class = "main-container ">
-    <div class ="buttons"> 
-    <selectButton> </selectButton>
-    <defaultButton> </defaultButton>
+  
+  <div class = "shoppingcart">
+  <div class = "cart">
+    <h1>Корзина</h1>
+    <p>Ваша корзина пуста</p>
+
   </div>
-    <div class="container-cards">
-     
+  <div class="personal">
+
+    <h2>Но у нас есть персональные предложения для вас</h2>
     <router-link class = "link" to= "/stone_island" >
     <card v-for = "(item, index) in listCard" :key="index"  class = 'card-item' :image="item.image" :price="item.price" :brend ="item.brend" :name = "item.name" />
   </router-link>
+  
+
   </div>
 </div>
+
 </template>
 
 <script>
-import card from '@/components/card.vue';
-import selectButton from '@/components/selectButton.vue'
-import defaultButton from '@/components/defaultButton.vue';
-import stone_island from './stone_island.vue';
-import shoppingCart from './shoppingCart.vue';
-
+ import card from '@/components/card.vue';
+  import stone_island from './stone_island.vue';
+  import Baseheader from '../components/Baseheader.vue'
+import Basefooter from '../components/Basefooter.vue'
   export default {
-    name: "mainpage",
+    name: "shoppingcart",
     components: {
-    card, selectButton, defaultButton, stone_island, shoppingCart
+    card, stone_island, Basefooter, Baseheader
     },
     data() {
     return {
@@ -56,41 +60,59 @@ import shoppingCart from './shoppingCart.vue';
     ]
     }
     }
-
-    
-
-  
   }
 </script>
 
 <style lang="scss" scoped>
-.main-container {
-  padding: 0px 190px;
-  margin-top: 24px;
+.cart {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  
+  h1 {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+color: #354153;
+  }
+  p{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 30px;
+color: #667085;
+
+  }
+}
+.shoppingcart {
+  margin: 40px 160px;
+  
   display: flex;
   flex-direction: column;
 }
-.buttons {
-  justify-content: space-between;
+.personal {
+  border-top: 1px solid #EAECF0;
+  padding-top: 40px;
   display: flex;
-}
-.container-cards {
-  justify-content: space-between;
-  display: flex;
+  flex-direction: column;
   
-  
+  h2 {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 40px;
+  }
 }
 .link {
   display: flex;
   text-decoration: none;
 
 }
-router-link {
-  router-link:visited {
-    color: black;
-  }
-
+.card-item {
+  display: flex;
 }
-
-
 </style>
